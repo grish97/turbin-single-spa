@@ -1,6 +1,5 @@
-# Turborepo starter
+# Micro-Frontend Application
 
-This is an official Yarn v1 starter turborepo.
 
 ## What's inside?
 
@@ -8,13 +7,17 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package ma
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
+- `api`: a [Node.js](https://nodejs.org/en/) app
+- `auth`: a [Single-Spa](https://single-spa.js.org/) with library [React.js](https://reactjs.org/) app
+- `react-dashboard`: a [Single-Spa](https://single-spa.js.org/) with library [React.js](https://reactjs.org/) app
+- `react-layout`: a [Single-Spa](https://single-spa.js.org/) with library [React.js](https://reactjs.org/) app
+- `shell`:  a [Single-Spa](https://single-spa.js.org/) with library [React.js](https://reactjs.org/) app
+- `vue-career`: a [Vue.js](https://vuejs.org/) app
 - `ui`: a stub React component library shared by both `web` and `docs` applications
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/) (without `vue-career` application).
 
 ### Utilities
 
@@ -26,14 +29,14 @@ This turborepo has some additional tools already setup for you:
 
 ## Setup
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+Package manager is Yarn.
 
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd turbin-single-spa
 yarn run build
 ```
 
@@ -42,7 +45,7 @@ yarn run build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd turbin-single-spa
 yarn run dev
 ```
 
