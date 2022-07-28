@@ -1,0 +1,58 @@
+name: deploy-vue-auth
+on:
+  push:
+    branches:
+      - main
+    paths: [
+      "apps/vue-auth/**",
+      ".github/workflows/vue-auth.yml"
+    ]
+
+defaults:
+  run:
+    working-directory: apps/vue-auth
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build
+
+        env:
+          PRODUCTION_DOMAIN: ${{ secrets.AWS_VUE_AUTH_DOMAIN }}
+
+      - name: Deploy To S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+          SOURCE_DIR: "apps/vue-auth/dist"
+          DEST_DIR: "vue-auth"
+
+      - name: Invalidate Cloudfront
+        uses: chetan/invalidate-cloudfront-action@v1.3
+        env:
+          DISTRIBUTION: ${{ secrets.AWS_VUE_AUTH_DISTRIBUTION_ID }}
+          PATHS: '/vue-auth/*'
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

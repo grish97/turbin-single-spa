@@ -1,0 +1,22 @@
+<single-spa-router>
+    <!-- Show this application all pages exception "auth" pages -->
+    <route path="ROUTE_EXCEPTION_AUTH_PAGES">
+        <application name="@turbo/react-layout"></application>
+    </route>
+
+    <route path="/dashboard">
+        <application name="@turbo/react-dashboard"></application>
+    </route>
+
+    <route path="/career">
+        <application name="@turbo/vue-career"></application>
+    </route>
+
+    <route path="/auth">
+        <application name="@turbo/auth"></application>
+    </route>
+
+    <route default>
+        <div class="unknown-route">Page Not Found 404</div>
+    </route>
+</single-spa-router>
