@@ -1,0 +1,17 @@
+
+.messenger {
+  background: rgb(11,18,30);
+  background: linear-gradient(180deg, rgba(11,18,30,1) 0%, rgba(19,12,26,1) 51%);
+}
+
+.app-toolbar,
+.app-members,
+.app-content {
+  height: 100vh;
+}
+
+.app-members {
+  border-style: solid;
+  border-color: #25353b;
+  border-width: 0 1px 0 1px;
+}

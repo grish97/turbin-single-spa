@@ -16,6 +16,10 @@ export function auth(location) {
   return location.pathname.startsWith("/auth");
 }
 
+export function messenger(location) {
+  return location.pathname.startsWith("/messenger");
+}
+
 export function reactLayout(location) {
   return !location.pathname.startsWith("/auth");
 }

@@ -1,0 +1,11 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "jsx": "react-jsx",
+    "declarationDir": "dist"
+  },
+  "files": ["src/turbo-messenger.tsx", "react-app-env.d.ts", "remoteEntry.d.ts"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}

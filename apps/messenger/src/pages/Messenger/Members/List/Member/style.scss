@@ -1,0 +1,52 @@
+@import "src/assets/scss/includes";
+
+.member {
+  display: flex;
+  align-items: center;
+  border: 0 solid $border-base-color;
+  //border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding: 30px 20px;
+
+  .profile-icon {
+    width: $profile_icon_size;
+    height: $profile_icon_size;
+    border: 1px solid $border-base-color;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .info {
+    width: calc(100% - #{$profile_icon_size});
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+
+      .member-name,
+      .last-message {
+        width: calc(100% - 30px);
+      }
+
+      .last-message {
+        color: $text-color-gray;
+      }
+
+      .message-count {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        background-color: $color-purple;
+        font-weight: bold;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

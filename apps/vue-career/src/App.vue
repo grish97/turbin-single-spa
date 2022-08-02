@@ -1,6 +1,20 @@
 <template>
-   Vue JS Career application Running on PORT 9002
+   <div>
+     Vue JS Career application Running on PORT 9002
+
+     <HelloWorld />
+   </div>
 </template>
+
+<script>
+import HelloWorld from "@/components/HelloWorld";
+
+export default {
+  components: {
+    HelloWorld
+  }
+}
+</script>
 
 <style>
 #app {

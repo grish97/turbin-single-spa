@@ -3,7 +3,7 @@ import { axiosPrivate } from "services";
 import { useAuth, useRefreshToken } from "hooks";
 
 /**
- * Hook for add intercepters to axios private request
+ * Hook for add interceptors for axios private request
  * @returns axios private instance
  */
 export default function useAxiosPrivate() {

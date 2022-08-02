@@ -7,10 +7,13 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { axios } from "services";
 import apiRoutes from "configs/apiRoutes";
 import useAuth from "hooks/useAuth";
+import { useAuth as useAuthService } from "@turbo/services";
 import "./Login.scss";
 
 export default function Login() {
   const { setAuth, persist } = useAuth();
+  // const { updateAccessToken } = useAuthService();
+  const { next } = useAuthService();
   const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
@@ -46,6 +49,19 @@ export default function Login() {
           persist: values.remember,
           isLogged: true,
           roles: [],
+        });
+
+        // updateAccessToken(responseData.accessToken);
+        next({
+          user: {
+            id: responseData.id,
+            email: responseData.email,
+            username: responseData.username,
+            accessToken: responseData.accessToken,
+            // persist: values.remember,
+            isLogged: true,
+            roles: [],
+          },
         });
 
         localStorage.setItem("persist", values.remember.toString());

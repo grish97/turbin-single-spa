@@ -37,7 +37,9 @@
       "imports": {
          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
          "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
-         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js"
+         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js",
+         "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/es2015/rxjs.min.js",
+         "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/es2015/rxjs-operators.min.js"
       }
     }
 
@@ -53,9 +55,10 @@
       "imports": {
        "@turbo/root-config": "//localhost:9000/turbo-root-config.js",
        "@turbo/react-layout": "//localhost:9001/turbo-react-layout.js",
-       "@turbo/vue-career": "//localhost:9002/js/app.js",
-       "@turbo/auth": "//localhost:9004/turbo-auth.js",
-       "@turbo/react-dashboard": "//localhost:9003/turbo-react-dashboard.js"
+       "@turbo/react-dashboard": "//localhost:9003/turbo-react-dashboard.js",
+        "@turbo/auth": "//localhost:9004/turbo-auth.js",
+       "@turbo/services": "//localhost:9005/turbo-services.js",
+       "@turbo/messenger": "//localhost:9006/turbo-messenger.js"
       }
     }
 
@@ -68,7 +71,9 @@
         "@turbo/root-config": "//d10qqstd2xnuqc.cloudfront.net/turbo-root-config.js",
         "@turbo/react-layout": "//dyznnmzlnk3xf.cloudfront.net/turbo-react-layout.js",
         "@turbo/vue-career": "//d2jxlsq6icm0hs.cloudfront.net/js/app.js",
-        "@turbo/react-dashboard": "//d44h6q7952ezj.cloudfront.net/turbo-react-dashboard.js"
+        "@turbo/react-dashboard": "//d44h6q7952ezj.cloudfront.net/turbo-react-dashboard.js",
+        "@turbo/services": "//localhost:9005/turbo-services.js",
+        "@turbo/messenger": "//localhost:9006/turbo-messenger.js"
       }
     }
 
@@ -97,6 +102,7 @@
         <div id="single-spa-application:@turbo/react-dashboard"></div>
 
         <div id="single-spa-application:@turbo/auth"></div>
+        <div id="single-spa-application:@turbo/messenger"></div>
 
         <div id="single-spa-application:@turbo/vue-career"></div>
       </div>

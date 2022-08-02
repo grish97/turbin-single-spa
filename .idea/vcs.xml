@@ -2,15 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/auth" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/auth-helpers" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/messenger" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/react-dashboard" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/react-layout" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/react-store" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/services" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/shell" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/store" vcs="Git" />
   </component>
 </project>

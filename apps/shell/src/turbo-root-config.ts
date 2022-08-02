@@ -20,6 +20,12 @@ registerApplication({
 });
 
 registerApplication({
+  name: "@turbo/messenger",
+  app: () => System.import("@turbo/messenger"),
+  activeWhen: isActive.messenger,
+});
+
+registerApplication({
   name: "@turbo/vue-career",
   app: () => System.import("@turbo/vue-career"),
   activeWhen: isActive.vueCareer,

@@ -49,7 +49,7 @@ export default function Register() {
     });
 
     if (res.status) {
-      navigate("/auth/login");
+      navigate("/auth/auth");
     }
   }
 

@@ -1,9 +1,8 @@
 declare module "@configs" {
-  import { Method } from "util/types";
 
   type TApiRoutes = {
     [name in string]: {
-      method: Method;
+      method: "GET" | "POST" | "PUT" | "DELETE";
       url: string;
     };
   };

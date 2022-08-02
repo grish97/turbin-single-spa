@@ -1,0 +1,27 @@
+@import "src/assets/scss/includes";
+
+.profile-icon {
+  position: relative;
+  border: 1px solid $border-base-color;
+  border-radius: 50%;
+
+  .first-latter {
+    width: inherit;
+    height: inherit;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    background-color: green;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+}

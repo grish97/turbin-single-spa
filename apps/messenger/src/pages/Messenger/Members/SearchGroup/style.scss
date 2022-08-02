@@ -1,0 +1,9 @@
+@import "src/assets/scss/includes";
+
+.search-group {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $border-base-color;
+}

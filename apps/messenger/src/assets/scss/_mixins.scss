@@ -1,0 +1,7 @@
+@function assets_path() {
+  @return "src/assets";
+}
+
+@function image_url($path) {
+  @return assets_path() + "/" + #{$path};
+}

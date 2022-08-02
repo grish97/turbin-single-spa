@@ -3,9 +3,10 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "jsx": "react-jsx",
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "declaration": true
   },
   "files": ["src/turbo-react-dashboard.tsx"],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "remoteEntry.d.ts"],
   "exclude": ["src/**/*.test*"]
 }

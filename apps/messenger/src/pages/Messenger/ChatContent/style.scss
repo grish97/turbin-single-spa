@@ -1,0 +1,25 @@
+@import "src/assets/scss/includes";
+
+$group_info_height: 80px;
+$typing_box_height: 60px;
+$conversation_height: calc(100% - #{$group_info_height + $typing_box_height});
+
+.chat-content {
+  width: inherit;
+  height: 100vh;
+
+  .group-info {
+    height: $group_info_height;
+  }
+
+  .conversation {
+    height: $conversation_height;
+    border: 0 solid $border-base-color;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+  }
+
+  .typing-box {
+    height: $typing_box_height;
+  }
+}

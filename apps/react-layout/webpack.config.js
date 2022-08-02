@@ -1,7 +1,6 @@
-const {merge, mergeWithRules} = require("webpack-merge");
+const { merge, mergeWithRules } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
-
-const {TsConfigPathsPlugin} = require('awesome-typescript-loader')
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader')
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({

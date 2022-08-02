@@ -1,0 +1,18 @@
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 30px;
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+
+    svg:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}

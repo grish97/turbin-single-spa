@@ -1,0 +1,14 @@
+
+@import "src/assets/scss/includes";
+
+.custom-input {
+  &.bg-theme, .ant-input {
+    background-color: $black-input-bg;
+    color: $text-color-gray;
+  }
+
+  &.no-border,
+  &.ant-input-affix-wrapper {
+      border: none;
+  }
+}

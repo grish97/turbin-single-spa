@@ -6,6 +6,6 @@
     "declarationDir": "dist"
   },
   "files": ["src/turbo-react-layout.tsx"],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "remoteEntry.d.ts"],
   "exclude": ["src/**/*.test*"]
 }

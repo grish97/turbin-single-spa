@@ -1,0 +1,28 @@
+
+@use "src/assets/scss/includes";
+
+.group-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px 0;
+
+  .left-area {
+    display: flex;
+
+    .profile-icon {
+      margin-right: 15px;
+    }
+
+    .any-statuses {
+      color: includes.$text-color-gray;
+      font-size: 12px;
+    }
+  }
+
+  .actions {
+    .search-icon {
+      margin-right: 15px;
+    }
+  }
+}

@@ -11,10 +11,10 @@ export default function Navigation() {
     <Routes>
       {/** Public routes */}
       <Route path="/auth" element={<PublicNavigation />}>
-        <Route index element={<Navigate to="/auth/login" replace />} />
+        <Route index element={<Navigate to="/auth/signin" replace />} />
 
-        <Route path="" element={<AuthLayout />}>
-          <Route path="login" element={<Login />} />
+        <Route element={<AuthLayout />}>
+          <Route path="signin" element={<Login />} />
           <Route path="register" element={<Register />} />
         </Route>
 

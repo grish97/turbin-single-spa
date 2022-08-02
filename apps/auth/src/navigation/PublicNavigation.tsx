@@ -1,8 +1,8 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "hooks";
+import { useAuth } from "@turbo/services";
 
 export default function PublicNavigation() {
-  const auth = useAuth();
+  const { authState } = useAuth();
 
-  return auth.isLogged ? <Navigate to="/" /> : <Outlet />;
+  return authState.user ? <Navigate to="/" /> : <Outlet />;
 }
