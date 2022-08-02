@@ -13,6 +13,7 @@ declare module "@turbo/services" {
 
   export interface IUserStore {
     user: IUser | null;
+    persist: boolean;
   }
 
   export const useAuth: () => {

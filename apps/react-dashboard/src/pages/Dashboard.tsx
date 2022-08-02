@@ -1,10 +1,11 @@
 import { useAuth } from "@turbo/services";
 import "./style.scss";
+import { useEffect, useCallback } from "react";
 
 export const Dashboard = () => {
   const { authState } = useAuth();
 
-  const getUser = () => {
+  const getUser = useCallback(() => {
     if (!authState?.user?.id) {
       return "Unauthorized!";
     }
@@ -15,7 +16,7 @@ export const Dashboard = () => {
         Access Token: <strong>{authState.user.accessToken.substring(0, 15)}...</strong>
       </>
     );
-  };
+  }, [authState]);
 
   return (
     <div className="dashboard">

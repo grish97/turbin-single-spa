@@ -1,17 +1,19 @@
 <template>
-   <div>
-     Vue JS Career application Running on PORT 9002
-
-     <HelloWorld />
-   </div>
+  <Career :credentials="credentials" />
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld";
+import Career from "@/components/Career";
+import { authSubject$ } from "@turbo/services";
 
 export default {
   components: {
-    HelloWorld
+    Career
+  },
+  data () {
+    return {
+      credentials: authSubject$.getValue().user,
+    }
   }
 }
 </script>

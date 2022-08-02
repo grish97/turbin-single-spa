@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { useAuth, useRefreshToken } from "auth/hooks";
+import {useCallback, useEffect, useState} from "react";
+import {useAuth, useRefreshToken} from "auth/hooks";
 
 export const usePersistLogin = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const { authState } = useAuth();
+  const {authState} = useAuth();
   const refresh = useRefreshToken();
 
   useEffect(() => {
@@ -17,16 +17,15 @@ export const usePersistLogin = () => {
       }
     };
 
-    !authState.user.isLogged && authState.persist
+    isVerify()
       ? verifyRefreshToken()
       : setIsLoading(false);
-
-    return () => {
-      console.log("Unmount");
-    };
   }, []);
 
+  const isVerify = () => !authState.user?.isLogged && authState.persist;
+
   return {
-    isLoading
+    isLoading,
+    isVerify
   };
 };

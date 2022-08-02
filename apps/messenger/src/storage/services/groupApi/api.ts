@@ -4,12 +4,12 @@ import { IGroup } from "@group-api";
 
 export const api = sourceApi.injectEndpoints({
   endpoints: (builder) => ({
-    getGroups: builder.query<IGroup[], void>({
+    getGroups: builder.query<{ data: IGroup[] }, void>({
       query: () => apiRoutes.APP_GET_GROUPS.url,
       providesTags: (result) => {
-        return result
+        return result && result.data
           ? [
-            ...result.map(({ id }) => ({ type: "Group" as const, id })),
+            ...result.data.map(({ id }) => ({ type: "Group" as const, id })),
             {type: "Group", id: "LIST"}
           ]
           : [{type: "Group", id: "LIST"}]

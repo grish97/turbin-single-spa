@@ -34,7 +34,7 @@ module.exports = (webpackConfigEnv, argv) => {
     },
     plugins: [
       new Dotenv({
-        path: "./.env.development.development"
+        path: "./.env.development"
       }),
     ],
     resolve: {
