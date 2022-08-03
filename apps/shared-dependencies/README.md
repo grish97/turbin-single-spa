@@ -1,0 +1,1 @@
+# Shared dependencies import-maps for micro-frontend application
