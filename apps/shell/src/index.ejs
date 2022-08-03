@@ -52,21 +52,7 @@
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
   <% if (isLocal) { %>
-    <script type="systemjs-importmap">
-    {
-      "imports": {
-       "@turbo/root-config": "//localhost:9000/turbo-root-config.js",
-       "@turbo/react-layout": "//localhost:9001/turbo-react-layout.js",
-       "@turbo/vue-career": "//localhost:9002/js/app.js",
-       "@turbo/react-dashboard": "//localhost:9003/turbo-react-dashboard.js",
-       "@turbo/auth": "//localhost:9004/turbo-auth.js",
-       "@turbo/services": "//localhost:9005/turbo-services.js",
-       "@turbo/messenger": "//localhost:9006/turbo-messenger.js"
-      }
-    }
-
-
-    </script>
+    <script type="systemjs-importmap" src="https://d2fkezbzb0nmla.cloudfront.net/importmap.json"></script>
   <% } else { %>
     <script type="systemjs-importmap">
     {
