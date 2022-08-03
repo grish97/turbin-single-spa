@@ -32,4 +32,6 @@ declare module "@turbo/services" {
   };
 
   export const authSubject$: BehaviorSubject<IUserStore>;
+
+  export const PrivateNavigation: React.FC;
 }

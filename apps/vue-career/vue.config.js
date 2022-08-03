@@ -8,9 +8,7 @@ module.exports = defineConfig({
       filename: 'js/app.js',
     },
   },
-  chainWebpack: (config) => {
-    config.externals([
-      "@turbo/services",
-    ]);
-  },
-})
+  chainWebpack(config) {
+    config.externals(["@turbo/services"]);
+  }
+});

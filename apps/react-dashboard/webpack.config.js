@@ -37,6 +37,9 @@ module.exports = (webpackConfigEnv, argv) => {
         new TsConfigPathsPlugin()
       ]
     },
+    externals: [
+      "@turbo/services"
+    ],
   });
 
   return merge(config, {

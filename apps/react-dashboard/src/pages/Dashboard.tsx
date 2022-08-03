@@ -3,7 +3,7 @@ import "./style.scss";
 import { useEffect, useCallback } from "react";
 
 export const Dashboard = () => {
-  const { authState } = useAuth();
+  const { authState, observable$ } = useAuth();
 
   const getUser = useCallback(() => {
     if (!authState?.user?.id) {
