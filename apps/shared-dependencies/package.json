@@ -1,0 +1,12 @@
+{
+  "name": "shared-dependencies",
+  "version": "0.1.0",
+  "description": "Shared dependencies import-maps for whole micro-frontend application",
+  "main": "index.js",
+  "author": "Grisha Vasilyan",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "bash build.sh"
+  }
+}
