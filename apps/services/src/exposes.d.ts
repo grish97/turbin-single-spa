@@ -27,6 +27,10 @@ declare module "@turbo/services" {
 
   export const useAxiosPrivate: () => AxiosInstance;
 
+  export const useLogout: () => {
+    logout: () => void;
+  };
+
   export const usePersistLogin: () => {
     isLoading: boolean;
   };

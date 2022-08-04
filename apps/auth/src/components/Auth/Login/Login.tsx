@@ -148,8 +148,9 @@ export default function Login() {
           >
             Log in
           </Button>
-          Or <Link to="/auth/register">register now!</Link>
         </Form.Item>
+
+        <Link to="/auth/register">Register now</Link>
       </Form>
     </div>
   );

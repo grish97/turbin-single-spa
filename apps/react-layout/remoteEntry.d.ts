@@ -31,5 +31,9 @@ declare module "@turbo/services" {
     isLoading: boolean;
   };
 
+  export const useLogout: () => {
+    logout: () => void;
+  };
+
   export const authSubject$: BehaviorSubject<IUserStore>;
 }

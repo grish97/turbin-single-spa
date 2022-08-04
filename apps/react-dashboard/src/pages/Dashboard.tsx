@@ -1,6 +1,6 @@
-import { useAuth } from "@turbo/services";
+import {useAuth} from "@turbo/services";
 import "./style.scss";
-import { useEffect, useCallback } from "react";
+import {useCallback} from "react";
 
 export const Dashboard = () => {
   const { authState, observable$ } = useAuth();
@@ -20,11 +20,13 @@ export const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <h1>This is Dashboard Application Running on port 9003</h1>
 
-      <div>
-        <h3>Current credentials is</h3>
-        <div>{getUser()}</div>
+      <div className="dashboard-content">
+        <h1>Dashboard Application Running on port 9003</h1>
+
+        <div>
+          <div>{getUser()}</div>
+        </div>
       </div>
     </div>
   );
