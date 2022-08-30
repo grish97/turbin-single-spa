@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Career',
+  name: 'MCareer',
   props: {
     credentials: Object,
   },

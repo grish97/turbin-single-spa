@@ -1,14 +1,14 @@
 <template>
-  <Career :credentials="credentials" />
+  <MCareer :credentials="credentials" />
 </template>
 
 <script>
-import Career from "@/components/Career";
+import MCareer from "@/components/Career";
 import { authSubject$ } from "@turbo/services";
 
 export default {
   components: {
-    Career
+    MCareer
   },
   data () {
     return {

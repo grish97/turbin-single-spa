@@ -19,7 +19,7 @@ const vueLifecycles = singleSpaVue({
       });
     },
   },
-  handleInstance(instance, props) {
+  handleInstance(instance) {
     instance.use(router);
   }
 });

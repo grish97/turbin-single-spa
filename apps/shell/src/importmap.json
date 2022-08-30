@@ -1,0 +1,19 @@
+{
+  "imports": {
+    "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+    "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
+    "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js",
+    "react-router-dom": "https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/6.3.0/react-router-dom.production.min.js",
+    "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
+    "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js",
+    "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/es2015/rxjs.min.js",
+    "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/es2015/rxjs-operators.min.js",
+    "@turbo/root-config": "http://localhost:9000/turbo-root-config.js",
+    "@turbo/react-layout": "http://localhost:9001/turbo-react-layout.js",
+    "@turbo/vue-career": "http://localhost:9002/js/app.js",
+    "@turbo/react-dashboard": "http://localhost:9003/turbo-react-dashboard.js",
+    "@turbo/auth": "http://localhost:9004/turbo-auth.js",
+    "@turbo/services": "http://localhost:9005/turbo-services.js",
+    "@turbo/messenger": "http://localhost:9006/turbo-messenger.js"
+  }
+}

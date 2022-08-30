@@ -5,7 +5,7 @@
     "jsx": "react-jsx",
     "declarationDir": "dist"
   },
-  "files": ["src/turbo-services.tsx", "react-env-app.d.ts"],
+  "files": ["src/turbo-services.tsx"],
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
 }
